@@ -1,0 +1,48 @@
+name: loco
+description: LOCO - online X O game (Flutter client for the LOCO Flask server)
+publish_to: "none"
+version: 3.0.0+1
+
+environment:
+  sdk: ">=3.3.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  provider: ^6.1.0
+  shared_preferences: ^2.2.0
+  socket_io_client: ">=2.0.3 <4.0.0"
+  flutter_webrtc: ">=0.12.0 <2.0.0"
+  audioplayers: ">=5.0.0 <8.0.0"
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ">=4.0.0"
+  flutter_launcher_icons: ^0.14.0
+  flutter_native_splash: ^2.4.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/audio/
+
+# dart run flutter_launcher_icons
+flutter_launcher_icons:
+  android: true
+  ios: false
+  image_path: "assets/icon/icon.png"
+  min_sdk_android: 21
+  adaptive_icon_background: "#0B1020"
+  adaptive_icon_foreground: "assets/icon/icon_foreground.png"
+
+# dart run flutter_native_splash:create
+flutter_native_splash:
+  color: "#0B1020"
+  image: assets/icon/splash.png
+  android_12:
+    color: "#0B1020"
+    image: assets/icon/icon_foreground.png
+    icon_background_color: "#0B1020"
